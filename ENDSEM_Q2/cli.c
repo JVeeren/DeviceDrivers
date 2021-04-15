@@ -4,8 +4,8 @@
 int num = 0;
 char *name="Veeren";
 
-module_param(num, int, S_IRUGO);
-module_param(name, charp, S_IRUGO);
+module_param(num, int, S_IRUGO);//module_param(name,type,permission);
+module_param(name, charp, S_IRUGO);//permission is for sysfs entry . here S_IRUGO is only read by all users.
 
 int init_module(void)
 {
